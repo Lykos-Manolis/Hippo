@@ -2,6 +2,11 @@
 
 Hippo is a full-stack restaurant reservation application as part of a college assignment. The application is built with Expo (React Native) for the frontend and Node.js/Express for the backend. This application allows users to browse restaurants, make reservations, and manage their bookings.
 
+<img src="Assets/overview.gif" width="200"/>
+
+> [!NOTE]
+> Hippo is a temporary name for the application. Hence the folder naming.
+
 ## Features
 
 ### User Features
@@ -14,6 +19,21 @@ Hippo is a full-stack restaurant reservation application as part of a college as
 - Update or cancel reservations
 - View restaurant locations on maps
 
+<div style="display:flex; gap:1em">
+  <div style="display:grid; gap:1em">
+    <img alt="Logging in" src="Assets/login.gif" style="border-radius:1em"/>
+    <sub>Logging in</sub>
+  </div>
+  <div style="display:grid; gap:1em">
+    <img alt="Making reservation" src="Assets/book.gif" style="border-radius:1em"/>
+    <sub>Making reservation</sub>
+  </div>
+  <div style="display:grid; gap:1em">
+    <img alt="Updating reservation" src="Assets/update_cancel.gif" style="border-radius:1em"/>
+    <sub>Updating reservation</sub>
+  </div>
+</div>
+
 ### Restaurant Features
 
 - Detailed restaurant profiles
@@ -21,6 +41,11 @@ Hippo is a full-stack restaurant reservation application as part of a college as
 - Available time slots for reservations
 - Capacity management
 - Restaurant images and descriptions
+
+<div style="display:grid; gap:1em">
+  <img alt="Restaurant list" src="Assets/restaurants.gif" width="200"/>
+  <sub>Restaurant list</sub>
+</div>
 
 ## Technical Architecture
 
