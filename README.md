@@ -19,21 +19,6 @@ Hippo is a full-stack restaurant reservation application as part of a college as
 - Update or cancel reservations
 - View restaurant locations on maps
 
-<div style="display:flex; gap:1em">
-  <div style="display:grid; gap:1em">
-    <img alt="Logging in" src="Assets/login.gif" style="border-radius:1em"/>
-    <sub>Logging in</sub>
-  </div>
-  <div style="display:grid; gap:1em">
-    <img alt="Making reservation" src="Assets/book.gif" style="border-radius:1em"/>
-    <sub>Making reservation</sub>
-  </div>
-  <div style="display:grid; gap:1em">
-    <img alt="Updating reservation" src="Assets/update_cancel.gif" style="border-radius:1em"/>
-    <sub>Updating reservation</sub>
-  </div>
-</div>
-
 ### Restaurant Features
 
 - Detailed restaurant profiles
@@ -41,11 +26,6 @@ Hippo is a full-stack restaurant reservation application as part of a college as
 - Available time slots for reservations
 - Capacity management
 - Restaurant images and descriptions
-
-<div style="display:grid; gap:1em">
-  <img alt="Restaurant list" src="Assets/restaurants.gif" width="200"/>
-  <sub>Restaurant list</sub>
-</div>
 
 ## Technical Architecture
 
@@ -57,31 +37,35 @@ The frontend is built using Expo and React Native, providing a cross-platform mo
 
 - **Authentication System**
 
-  - Login/Signup functionality
-  - Token-based authentication
-  - Protected routes
-  - Session management
+  > - Login/Signup functionality
+  > - Token-based authentication
+  > - Protected routes
+  > - Session management
+  <img src="Assets/login.gif" width="200"/>
 
 - **Restaurant Browsing**
 
-  - Restaurant listings
-  - Detailed restaurant views
-  - Image galleries
-  - Location maps
+  > - Restaurant listings
+  > - Detailed restaurant views
+  > - Image galleries
+  > - Location maps
+  <img alt="Restaurant list" src="Assets/restaurants.gif" width="200"/>
 
 - **Reservation System**
 
-  - Interactive booking calendar
-  - Time slot selection
-  - Party size selection
-  - Reservation management
-  - Booking confirmation
+  > - Interactive booking calendar
+  > - Time slot selection
+  > - Party size selection
+  > - Reservation management
+  > - Booking confirmation
+  <img src="Assets/book.gif" width="200"/>
 
 - **User Profile**
-  - View active reservations
-  - Update reservation details
-  - Cancel reservations
-  - User information management
+  > - View active reservations
+  > - Update reservation details
+  > - Cancel reservations
+  > - User information management
+  <img src="Assets/update_cancel.gif" width="200"/>
 
 ### Backend (Node.js/Express)
 
