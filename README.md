@@ -90,7 +90,33 @@ The backend is built with Node.js and Express, providing a RESTful API with the 
   - `/reservations/:id` - Get reservation details
   - Reservation management endpoints (CRUD operations)
 
+## Environment Variables
+
+### Frontend
+
+Create a `.env` file in the frontend directory with:
+
+```js
+EXPO_PUBLIC_GOOGLE_MAPS_API_KEY = your_api_key;
+```
+
+### Backend
+
+Create a `.env` file in the backend directory with:
+
+```js
+PORT = your_preferred_port;
+JWT_SECRET = your_jwt_secret;
+DB_HOST = your_db_host;
+DB_USER = your_db_username;
+DB_PASSWORD = your_db_password;
+DB_NAME = your_db_name;
+```
+
 ## Installation & Setup
+
+> [!CAUTION]
+> Before starting any development server make sure you have created the necessary environment variables or else the server **will not function properly**.
 
 ### Frontend Setup
 
@@ -104,6 +130,10 @@ The backend is built with Node.js and Express, providing a RESTful API with the 
 
    ```bash
    npm install
+   ```
+    In case there are version conflicts during installation you can use:
+   ```bash
+   npm install --legacy-peer-deps
    ```
 
 3. Start the development server:
@@ -129,29 +159,6 @@ The backend is built with Node.js and Express, providing a RESTful API with the 
    ```bash
    node server.js
    ```
-
-## Environment Variables
-
-### Frontend
-
-Create a `.env` file in the frontend directory with:
-
-```js
-EXPO_PUBLIC_GOOGLE_MAPS_API_KEY = your_api_key;
-```
-
-### Backend
-
-Create a `.env` file in the backend directory with:
-
-```js
-PORT = your_preferred_port;
-JWT_SECRET = your_jwt_secret;
-DB_HOST = your_db_host;
-DB_USER = your_db_username;
-DB_PASSWORD = your_db_password;
-DB_NAME = your_db_name;
-```
 
 ## Technologies Used
 
