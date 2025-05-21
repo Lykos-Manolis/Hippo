@@ -90,6 +90,63 @@ The backend is built with Node.js and Express, providing a RESTful API with the 
   - `/reservations/:id` - Get reservation details
   - Reservation management endpoints (CRUD operations)
 
+## Database
+The application requires MariaDB to be installed before configuring the database. You can follow the instructions to download and setup from [here](https://mariadb.org/download/?t=mariadb&p=mariadb&r=11.7.2&os=windows&cpu=x86_64&pkg=msi&mirror=neterra).
+> [!IMPORTANT]
+> Keep note of the username and password, they will be needed to connect to the application server.
+
+### Creating the database
+The database can be created running the following code in your preferred environment. You should change the name but keep note of it because it will be used later.
+```sql
+CREATE DATABASE IF NOT EXISTS `your_db_name`;
+USE `your_db_name`;
+```
+
+### Creating the tables
+After creating the database you can move to the tables.
+The tables are pretty standard in this application so you can run the code as is.
+
+#### Table 1: Users
+```sql
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `email` (`email`)
+);
+```
+
+#### Table 2: Restaurants
+```sql
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `email` (`email`)
+);
+```
+
+#### Table 3: Reservations
+```sql
+CREATE TABLE `reservations` (
+  `reservation_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `restaurant_id` int(11) DEFAULT NULL,
+  `date` date NOT NULL,
+  `time` time NOT NULL,
+  `people_count` int(11) NOT NULL,
+  PRIMARY KEY (`reservation_id`),
+  KEY `user_id` (`user_id`),
+  KEY `restaurant_id` (`restaurant_id`),
+  CONSTRAINT `reservations_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
+  CONSTRAINT `reservations_ibfk_2` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurants` (`restaurant_id`)
+);
+```
+
 ## Environment Variables
 
 ### Frontend
